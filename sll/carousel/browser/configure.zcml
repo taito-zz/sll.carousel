@@ -1,15 +1,21 @@
 <configure
   i18n_domain="sll.carousel"
   xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns:carousel="http://namespaces.plone.org/carousel"
   xmlns="http://namespaces.zope.org/zope"
   >
 
-  <browser:page
-    class=".template.DemoView"
-    for="*"
+  <browser:resourceDirectory
+    directory="stylesheets"
     layer=".interfaces.ISllCarouselLayer"
-    name="demo"
-    permission="zope2.View"
+    name="sll.carousel.stylesheets"
+    />
+
+  <carousel:banner
+    name="banner-default"
+    layer=".interfaces.ISllCarouselLayer"
+    template="templates/banner-default.pt"
+    title="Default"
     />
 
 </configure>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+    interface="sll.carousel.browser.interfaces.ISllCarouselLayer"
+    name="sll.carousel"
+    />
+</layers>

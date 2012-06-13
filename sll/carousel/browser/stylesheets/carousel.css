@@ -1,5 +1,23 @@
+.carousel {
+    background: #767676;
+    margin-bottom: 0;
+    padding-top: 10px;
+}
+.carousel-banners {
+    margin: auto;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.carousel-pager {
+    margin: auto;
+    text-align: right;
+    width: 630px;
+}
 .carousel-text {
     background-color: rgba(40, 40, 40, 0.7);
+    height: 290px;
+    margin-left: 70%;
     position: relative;
     width: 30%;
 }

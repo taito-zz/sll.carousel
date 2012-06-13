@@ -18,4 +18,12 @@
     title="Default"
     />
 
+  <browser:viewlet
+    class="Products.Carousel.browser.viewlet.CarouselViewlet"
+    layer=".interfaces.ISllCarouselLayer"
+    manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+    name="Products.Carousel.viewlet"
+    permission="zope2.View"
+    />
+
 </configure>

@@ -81,6 +81,27 @@ class TestCase(IntegrationTestCase):
         item = css.getResource('++resource++sll.carousel.stylesheets/carousel.css')
         self.assertFalse(item.getTitle())
 
+    def test_viewlets__Products_Carousel_viewlet__order(self):
+        from zope.component import getUtility
+        from plone.app.viewletmanager.interfaces import IViewletSettingsStorage
+        storage = getUtility(IViewletSettingsStorage)
+        self.assertEqual(
+            storage.getOrder('plone.portaltop', '*'),
+            (
+                u'plone.header',
+                u'Products.Carousel.viewlet',
+            )
+        )
+
+    def test_viewlets__Products_Carousel_viewlet__hidden(self):
+        from zope.component import getUtility
+        from plone.app.viewletmanager.interfaces import IViewletSettingsStorage
+        storage = getUtility(IViewletSettingsStorage)
+        self.assertEqual(
+            storage.getHidden('plone.abovecontent', '*'),
+            (u'Products.Carousel.viewlet',)
+        )
+
     def test_uninstall__package(self):
         installer = getToolByName(self.portal, 'portal_quickinstaller')
         installer.uninstallProducts(['sll.carousel'])

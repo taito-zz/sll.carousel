@@ -4,8 +4,8 @@ from setuptools import setup
 
 setup(
     name='sll.carousel',
-    version='0.0',
-    description="",
+    version='0.1',
+    description="Adds Carousel to SLL Site.",
     long_description=open("README.rst").read(),
     # Get more strings from
     # http://pypi.python.org/pypi?:action=list_classifiers

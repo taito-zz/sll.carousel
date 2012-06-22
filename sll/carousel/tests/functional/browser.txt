@@ -3,4 +3,28 @@ Log in as the portal owner::
     >>> from plone.app.testing import TEST_USER_NAME, TEST_USER_PASSWORD
     >>> browser.login(TEST_USER_NAME, TEST_USER_PASSWORD)
 
-Continue your test::
+Check Carousel link::
+
+    >>> browser.open(portal_url)
+    >>> '@@edit-carousel' in browser.contents
+    True
+
+    >>> browser.open('/@@edit-carousel')
+    >>> 'Insufficient Privileges' in browser.contents
+    False
+
+    >>> browser.getLink('Log out').click()
+
+Log in as editor::
+
+    >>> browser.login(user2, user2)
+
+Check Carousel link::
+
+    >>> browser.open(portal_url)
+    >>> '@@edit-carousel' in browser.contents
+    False
+
+    >>> browser.open('/@@edit-carousel')
+    >>> 'Insufficient Privileges' in browser.contents
+    True

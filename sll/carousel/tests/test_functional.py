@@ -1,8 +1,9 @@
-from sll.carousel.tests.base import FUNCTIONAL_TESTING
+from Products.CMFCore.utils import getToolByName
 from hexagonit.testing.browser import Browser
-from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
+from plone.app.testing import setRoles
 from plone.testing import layered
+from sll.carousel.tests.base import FUNCTIONAL_TESTING
 from zope.testing import renormalizing
 
 import doctest
@@ -39,6 +40,12 @@ def setUp(self):
     portal.error_log._ignored_exceptions = ()
 
     setRoles(portal, TEST_USER_ID, ['Manager'])
+
+    user2 = 'test_user_2_'
+    regtool = getToolByName(portal, 'portal_registration')
+    regtool.addMember(user2, user2)
+    setRoles(portal, user2, ['Editor'])
+    self.globs['user2'] = user2
 
     transaction.commit()
 

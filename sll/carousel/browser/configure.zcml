@@ -12,10 +12,25 @@
     />
 
   <carousel:banner
-    name="banner-default"
     layer=".interfaces.ISllCarouselLayer"
+    name="banner-default"
     template="templates/banner-default.pt"
     title="Default"
+    />
+
+  <browser:page
+    for="Products.Carousel.interfaces.ICarousel"
+    layer=".interfaces.ISllCarouselLayer"
+    name="pager-base"
+    permission="zope2.View"
+    template="templates/pager-base.pt"
+    />
+
+  <carousel:pager
+    layer=".interfaces.ISllCarouselLayer"
+    name="pager-numbers"
+    template="templates/pager-numbers.pt"
+    title="Numbers"
     />
 
   <browser:viewlet

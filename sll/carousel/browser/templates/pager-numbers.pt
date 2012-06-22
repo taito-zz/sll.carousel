@@ -1,0 +1,9 @@
+<metal:pager metal:use-macro="context/@@pager-base/macros/pager">
+    <metal:pageritem fill-slot="pager_item_body">
+        <a tal:attributes="class string:carousel-pager-item carousel-pager-item-${repeat/banner/number}"
+            href="#"
+            class="carousel-number">
+            &#9679;
+        </a>
+    </metal:pageritem>
+</metal:pager>

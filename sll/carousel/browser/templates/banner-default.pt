@@ -1,54 +1,55 @@
 <metal:banners use-macro="context/@@banner-base/macros/banners">
-  <metal:banner fill-slot="banner_body">
-    <tal:banner tal:define="link_url banner/getRemoteUrl;
-            has_link_url python:link_url and not link_url == 'http://';
-            image_url banner/getImageUrl;
-            has_image_url python:image_url and not image_url == 'http://';">
-      <!-- <a tal:define="image banner/getImage;"
-          tal:omit-tag="not:has_link_url"
-          tal:condition="python:'image' in elements and (image or has_image_url)"
-          tal:attributes="href link_url;
-              title banner/Title;"
-          class="carousel-image">
-          <span tal:omit-tag="has_link_url"
-              class="carousel-image">
-              <img tal:condition="not:has_image_url" 
-                  tal:replace="structure python:banner.tag()"/>
-              <img tal:condition="has_image_url"
-                  tal:attributes="src image_url;
-                      alt banner/Title;"
-                  src="" />
-          </span>
-      </a> -->
-      <div
-        class="carousel-area"
-        style="background:url(logo.png);"
-        tal:define="image banner/getImage;"
-        tal:attributes="style string:background:url(${image/absolute_url});"
-        >
-        <div tal:define="text banner/getText|nothing;" 
-            tal:condition="python:'title' in elements or ('text' in elements and text)"
-            class="carousel-text">
-            <a tal:condition="python:'title' in elements"
+    <metal:banner fill-slot="banner_body">
+        <tal:banner tal:define="link_url banner/getRemoteUrl;
+                has_link_url python:link_url and not link_url == 'http://';
+                image_url banner/getImageUrl;
+                has_image_url python:image_url and not image_url == 'http://';">
+            <a tal:define="image banner/getImage;"
                 tal:omit-tag="not:has_link_url"
-                tal:attributes="href link_url;"
-                class="carousel-title">
+                tal:condition="python:'image' in elements and (image or has_image_url)"
+                tal:attributes="href link_url;
+                    title banner/Title;"
+                class="carousel-image">
                 <span tal:omit-tag="has_link_url"
-                    class="carousel-title">
-                    <span tal:replace="banner/Title">Banner Title</span>
+                    class="carousel-image">
+                    <img tal:condition="not:has_image_url" 
+                        tal:replace="structure python:banner.tag()"/>
+                    <img tal:condition="has_image_url"
+                        tal:attributes="src image_url;
+                            alt banner/Title;"
+                        src="" />
                 </span>
             </a>
-            <div tal:condition="python:text and 'text' in elements"
-                tal:content="structure text"
-                class="carousel-body">
-                Body text
+            <div tal:define="text banner/getText|nothing;" 
+                tal:condition="python:'title' in elements or ('text' in elements and text)"
+                class="carousel-text">
+                <a tal:condition="python:'title' in elements"
+                    tal:omit-tag="not:has_link_url"
+                    tal:attributes="href link_url;"
+                    class="carousel-title">
+                    <span tal:omit-tag="has_link_url"
+                        class="carousel-title">
+                        <span tal:replace="banner/Title">Banner Title</span>
+                    </span>
+                </a>
+                <div tal:condition="python:text and 'text' in elements"
+                    tal:content="structure text"
+                    class="carousel-body">
+                    Body text
+                </div>
+                <a 
+                    tal:attributes="href link_url;"
+                    tal:omit-tag="not:has_link_url"
+                    class="carousel-link"
+                    i18n:domain="sll.templates"
+                    i18n:translate="">
+                    Read more
+                </a>
             </div>
-        </div>
-        <a tal:attributes="href link_url;"
-            tal:omit-tag="not:has_link_url"
-            class="carousel-structural-link">
-        </a>
-      </div>
-    </tal:banner>
-  </metal:banner>
+            <a tal:attributes="href link_url;"
+                tal:omit-tag="not:has_link_url"
+                class="carousel-structural-link">
+            </a>
+        </tal:banner>
+    </metal:banner>
 </metal:banners>

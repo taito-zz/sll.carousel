@@ -1,0 +1,9 @@
+<div metal:define-macro="pager" 
+    class="carousel-pager"
+    tal:define="banners context/getBanners;
+        settings context/getSettings;">
+    <tal:pageritems tal:repeat="banner banners">
+        <metal:pageritem define-slot="pager_item_body" />
+    </tal:pageritems>
+    <a href="#" class="carousel-pager-button-prev">&lt;</a><a href="#" class="carousel-pager-button-next">&gt;</a>
+</div>

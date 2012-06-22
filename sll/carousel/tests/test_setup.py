@@ -81,6 +81,29 @@ class TestCase(IntegrationTestCase):
         item = css.getResource('++resource++sll.carousel.stylesheets/carousel.css')
         self.assertFalse(item.getTitle())
 
+    def test_rolemap__Carousel_Add_Carousel_Banner__rolesOfPermission(self):
+        permission = "Carousel: Add Carousel Banner"
+        roles = [
+            item['name'] for item in self.portal.rolesOfPermission(
+                permission
+            ) if item['selected'] == 'SELECTED'
+        ]
+        roles.sort()
+        self.assertEqual(
+            roles,
+            [
+                'Manager',
+                'Site Administrator',
+            ]
+        )
+
+    def test_rolemap__Carousel_Add_Carousel_Banner__acquiredRolesAreUsedBy(self):
+        permission = "Carousel: Add Carousel Banner"
+        self.assertEqual(
+            self.portal.acquiredRolesAreUsedBy(permission),
+            ''
+        )
+
     def test_viewlets__Products_Carousel_viewlet__order(self):
         from zope.component import getUtility
         from plone.app.viewletmanager.interfaces import IViewletSettingsStorage

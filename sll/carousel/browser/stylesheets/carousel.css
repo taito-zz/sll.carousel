@@ -24,10 +24,13 @@
     height: 290px;
     padding-top: 2em;
     position: static;
-    width: 100%;
 }
 .carousel-title {
     font-size: 150%;
+}
+.carousel-body {
+    font-size: 90%;
+    margin-right: 0.1em;
 }
 .carousel-pager-item {
     background-color: transparent;

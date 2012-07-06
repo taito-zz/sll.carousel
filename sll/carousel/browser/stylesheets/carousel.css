@@ -18,7 +18,7 @@
 }
 .carousel-image {
     float: left;
-    margin-right: 20px;
+    margin-right: 25px;
 }
 .carousel-image img{
     border-radius: 10px 0 0 10px;
@@ -29,9 +29,9 @@
     bottom: 0;
     height: 260px;
     left: 0;
-    padding: 30px 20px 0 0;
+    padding: 30px 25px 0 0;
     position: static;
-    width: 960px;
+    width: 955px;
 }
 .carousel-title {
     font-size: 150%;

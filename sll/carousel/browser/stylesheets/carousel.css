@@ -8,9 +8,6 @@
     margin: auto;
     border-radius: 10px;
 }
-/*.carousel-banner {
-    border-radius: 10px;
-}*/
 
 .carousel-pager {
     margin: auto;
@@ -21,23 +18,20 @@
 }
 .carousel-image {
     float: left;
-    margin-right: 1em;
-    /*border-radius: 10px 0 0 10px;*/
+    margin-right: 1.5em;
 }
 .carousel-image img{
     border-radius: 10px 0 0 10px;
 }
 .carousel-text {
     background-color: white;
-    height: 260px;
-    padding-top: 2em;
-    position: static;
     border-radius: 10px;
     bottom: 0;
+    height: 290px;
     left: 0;
-    padding: 0;
     padding-top: 30px;
-    width: 100%;
+    position: static;
+    width: 980px;
 }
 .carousel-title {
     font-size: 150%;

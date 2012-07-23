@@ -53,6 +53,7 @@
 }
 .carousel-pager-button-prev,
 .carousel-pager-button-next {
+    background: transparent;
     font-size: 150%;
     font-weight: bold;
     margin: 0;
@@ -60,8 +61,8 @@
 }
 .carousel-pager-button-prev:hover,
 .carousel-pager-button-next:hover {
-    background: #205C90;
-    color: #DDDDDD;
+    background: #DDDDDD;
+    color: white;
 }
 .carousel-pager-button-prev {
     border-radius: 5px 0 0 5px;
@@ -71,3 +72,10 @@
     border-radius: 0 5px 5px 0;
     border: 1px solid #888;
 }
+
+/*.carousel-pager-button-prev:link,
+.carousel-pager-button-next:link,
+.carousel-pager-button-prev:visited,
+.carousel-pager-button-next:visited {
+    color: #DDDDDD;
+}*/

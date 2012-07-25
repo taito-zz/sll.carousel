@@ -54,10 +54,10 @@
 .carousel-pager-button-prev,
 .carousel-pager-button-next {
     background: transparent;
-    font-size: 150%;
+    font-size: 120%;
     font-weight: bold;
     margin: 0;
-    padding: 0.1em 0.25em;
+    padding: 0 0.25em;
 }
 .carousel-pager-button-prev:hover,
 .carousel-pager-button-next:hover {

@@ -66,16 +66,9 @@
 }
 .carousel-pager-button-prev {
     border-radius: 5px 0 0 5px;
-    border: 1px solid #888;
+    border: 1px solid #aaa;
 }
 .carousel-pager-button-next {
     border-radius: 0 5px 5px 0;
-    border: 1px solid #888;
+    border: 1px solid #aaa;
 }
-
-/*.carousel-pager-button-prev:link,
-.carousel-pager-button-next:link,
-.carousel-pager-button-prev:visited,
-.carousel-pager-button-next:visited {
-    color: #DDDDDD;
-}*/

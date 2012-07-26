@@ -53,16 +53,23 @@
 }
 .carousel-pager-button-prev,
 .carousel-pager-button-next {
-    background: transparent;
+    background: #DDDDDD;
     font-size: 120%;
     font-weight: bold;
     margin: 0;
     padding: 0 0.25em;
 }
+.carousel-pager-button-prev:link,
+.carousel-pager-button-prev:visited,
+.carousel-pager-button-next:link,
+.carousel-pager-button-next:visited {
+    color: white;
+}
+
 .carousel-pager-button-prev:hover,
 .carousel-pager-button-next:hover {
     background: #DDDDDD;
-    color: white;
+    color: #0084A7;
 }
 .carousel-pager-button-prev {
     border-radius: 5px 0 0 5px;

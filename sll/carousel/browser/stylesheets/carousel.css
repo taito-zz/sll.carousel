@@ -46,10 +46,18 @@
     font-size: 150%;
     text-shadow: 0px -1px 1px #666;
 }
+.carousel-pager a {
+    color: #DDDDDD;
+}
 .carousel-pager-item-active:link,
 .carousel-pager-item-active:visited,
 .carousel-pager-item-active {
-    color: #DDDDDD;
+    color: #0084A7;
+}
+.carousel-pager-item-active:link,
+.carousel-pager-item-active:visited,
+.carousel-pager-item-active {
+    color: #0084A7;
 }
 .carousel-pager-button-prev,
 .carousel-pager-button-next {

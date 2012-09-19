@@ -11,16 +11,15 @@ setup(
     # http://pypi.python.org/pypi?:action=list_classifiers
     classifiers=[
         "Framework :: Plone",
-        "Framework :: Plone :: 4.1",
         "Framework :: Plone :: 4.2",
         "Framework :: Plone :: 4.3",
         "Programming Language :: Python",
-    ],
+        "Programming Language :: Python :: 2.7"],
     keywords='',
     author='Taito Horiuchi',
     author_email='taito.horiuchi@abita.fi',
     url='http://sll.fi/',
-    license='BSD',
+    license='Non-free',
     packages=find_packages(exclude=['ez_setup']),
     namespace_packages=['sll'],
     include_package_data=True,
@@ -30,12 +29,10 @@ setup(
         'hexagonit.testing',
         'plone.browserlayer',
         'setuptools',
-        'zope.i18nmessageid',
-    ],
+        'zope.i18nmessageid'],
     entry_points="""
     # -*- Entry points: -*-
 
     [z3c.autoinclude.plugin]
     target = plone
-    """,
-)
+    """)

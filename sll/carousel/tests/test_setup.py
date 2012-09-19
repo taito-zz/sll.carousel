@@ -1,5 +1,5 @@
-from sll.carousel.tests.base import IntegrationTestCase
 from Products.CMFCore.utils import getToolByName
+from sll.carousel.tests.base import IntegrationTestCase
 
 
 class TestCase(IntegrationTestCase):

@@ -81,6 +81,11 @@ class TestCase(IntegrationTestCase):
         item = css.getResource('++resource++sll.carousel.stylesheets/carousel.css')
         self.assertFalse(item.getTitle())
 
+    def test_propertiestool_navtree_properties__metaTypesNotToList(self):
+        properties = getToolByName(self.portal, 'portal_properties')
+        navtree_properties = getattr(properties, 'navtree_properties')
+        self.assertTrue('Carousel Banner' in navtree_properties.getProperty('metaTypesNotToList'))
+
     def test_rolemap__Carousel_Add_Carousel_Banner__rolesOfPermission(self):
         permission = "Carousel: Add Carousel Banner"
         roles = [

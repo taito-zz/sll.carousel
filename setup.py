@@ -5,7 +5,7 @@ from setuptools import setup
 setup(
     name='sll.carousel',
     version='0.1.1',
-    description="Adds Carousel to SLL Site.",
+    description="Customizes Products.Carousel package for SLL Site.",
     long_description=open("README.rst").read(),
     # Get more strings from
     # http://pypi.python.org/pypi?:action=list_classifiers
@@ -18,7 +18,7 @@ setup(
     keywords='',
     author='Taito Horiuchi',
     author_email='taito.horiuchi@abita.fi',
-    url='http://sll.fi/',
+    url='http://www.sll.fi/',
     license='Non-free',
     packages=find_packages(exclude=['ez_setup']),
     namespace_packages=['sll'],
@@ -28,8 +28,7 @@ setup(
         'Products.Carousel',
         'hexagonit.testing',
         'plone.browserlayer',
-        'setuptools',
-        'zope.i18nmessageid'],
+        'setuptools'],
     entry_points="""
     # -*- Entry points: -*-
 

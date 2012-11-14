@@ -147,5 +147,4 @@ class TestCase(IntegrationTestCase):
         installer.uninstallProducts(['sll.carousel'])
         css = getToolByName(self.portal, 'portal_css')
         self.failIf(
-            '++resource++sll.carousel.stylesheets/carousel.css' in css.getResourceIds()
-            )
+            '++resource++sll.carousel.stylesheets/carousel.css' in css.getResourceIds())

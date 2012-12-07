@@ -8,13 +8,9 @@ class TestCase(IntegrationTestCase):
     def setUp(self):
         self.portal = self.layer['portal']
 
-    def test_is_sll_carousel_installed(self):
+    def test_package_installed(self):
         installer = getToolByName(self.portal, 'portal_quickinstaller')
         self.failUnless(installer.isProductInstalled('sll.carousel'))
-
-    def test_is_Carousel_installed(self):
-        installer = getToolByName(self.portal, 'portal_quickinstaller')
-        self.failUnless(installer.isProductInstalled('Carousel'))
 
     def test_browserlayer(self):
         from sll.carousel.browser.interfaces import ISllCarouselLayer
@@ -64,7 +60,7 @@ class TestCase(IntegrationTestCase):
     def test_cssregistry_configured__media(self):
         css = getToolByName(self.portal, 'portal_css')
         item = css.getResource('++resource++sll.carousel.stylesheets/carousel.css')
-        self.assertFalse(item.getMedia())
+        self.assertEqual(item.getMedia(), 'screen')
 
     def test_cssregistry_configured__rel(self):
         css = getToolByName(self.portal, 'portal_css')
@@ -81,6 +77,15 @@ class TestCase(IntegrationTestCase):
         item = css.getResource('++resource++sll.carousel.stylesheets/carousel.css')
         self.assertFalse(item.getTitle())
 
+    def test_metadata__dependency__Products_Carousel(self):
+        installer = getToolByName(self.portal, 'portal_quickinstaller')
+        self.failUnless(installer.isProductInstalled('Carousel'))
+
+    def test_metadata__version(self):
+        setup = getToolByName(self.portal, 'portal_setup')
+        self.assertEqual(
+            setup.getVersionForProfile('profile-sll.carousel:default'), u'1')
+
     def test_propertiestool_navtree_properties__metaTypesNotToList(self):
         properties = getToolByName(self.portal, 'portal_properties')
         navtree_properties = getattr(properties, 'navtree_properties')
@@ -89,46 +94,15 @@ class TestCase(IntegrationTestCase):
     def test_rolemap__Carousel_Add_Carousel_Banner__rolesOfPermission(self):
         permission = "Carousel: Add Carousel Banner"
         roles = [
-            item['name'] for item in self.portal.rolesOfPermission(
-                permission
-            ) if item['selected'] == 'SELECTED'
-        ]
+            item['name'] for item in self.portal.rolesOfPermission(permission) if item['selected'] == 'SELECTED']
         roles.sort()
-        self.assertEqual(
-            roles,
-            [
-                'Manager',
-                'Site Administrator',
-            ]
-        )
+        self.assertEqual(roles, [
+            'Manager',
+            'Site Administrator'])
 
     def test_rolemap__Carousel_Add_Carousel_Banner__acquiredRolesAreUsedBy(self):
         permission = "Carousel: Add Carousel Banner"
-        self.assertEqual(
-            self.portal.acquiredRolesAreUsedBy(permission),
-            ''
-        )
-
-    def test_viewlets__Products_Carousel_viewlet__order(self):
-        from zope.component import getUtility
-        from plone.app.viewletmanager.interfaces import IViewletSettingsStorage
-        storage = getUtility(IViewletSettingsStorage)
-        self.assertEqual(
-            storage.getOrder('plone.portaltop', '*'),
-            (
-                u'plone.header',
-                u'Products.Carousel.viewlet',
-            )
-        )
-
-    def test_viewlets__Products_Carousel_viewlet__hidden(self):
-        from zope.component import getUtility
-        from plone.app.viewletmanager.interfaces import IViewletSettingsStorage
-        storage = getUtility(IViewletSettingsStorage)
-        self.assertEqual(
-            storage.getHidden('plone.abovecontent', '*'),
-            (u'Products.Carousel.viewlet',)
-        )
+        self.assertEqual(self.portal.acquiredRolesAreUsedBy(permission), '')
 
     def test_uninstall__package(self):
         installer = getToolByName(self.portal, 'portal_quickinstaller')

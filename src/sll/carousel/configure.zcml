@@ -4,7 +4,7 @@
   xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
   xmlns="http://namespaces.zope.org/zope">
 
-  <includeDependencies package="." />
+  <include package="Products.Carousel" />
 
   <genericsetup:registerProfile
     description="Installs the sll.carousel package"

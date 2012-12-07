@@ -11,7 +11,7 @@
     enabled="on"
     expression=""
     id="++resource++sll.carousel.stylesheets/carousel.css"
-    media=""
+    media="screen"
     rel="stylesheet"
     rendering="link"
     title=""

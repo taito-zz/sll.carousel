@@ -35,7 +35,7 @@
   <browser:viewlet
     class="Products.Carousel.browser.viewlet.CarouselViewlet"
     layer=".interfaces.ISllCarouselLayer"
-    manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+    manager="plone.app.layout.viewlets.interfaces.IAboveContent"
     name="Products.Carousel.viewlet"
     permission="zope2.View"
     view="plone.app.layout.globals.interfaces.IViewView"

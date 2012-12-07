@@ -1,16 +1,18 @@
-.carousel {
-    background: SkyBlue;
-    height: 290px;
-    margin-bottom: 0;
-    padding-top: 10px;
+#portal-columns .carousel {
+    display: none;
 }
-.carousel-banners {
-    margin: auto;
+.carousel,
+.carousel-banners,
+.carousel-text {
     border-radius: 10px;
+    height: 290px;
 }
-
-.carousel-pager {
+.carousel {
+    background-color: white;
     margin: auto;
+    width: 80%
+}
+.carousel-pager {
     position: relative;
     text-align: right;
     top: -40px;
@@ -20,12 +22,11 @@
     float: left;
     margin-right: 25px;
 }
-.carousel-image img{
+.carousel-image img {
     border-radius: 10px 0 0 10px;
 }
 .carousel-text {
     background-color: white;
-    border-radius: 10px;
     bottom: 0;
     height: 260px;
     left: 0;
@@ -86,4 +87,10 @@
 .carousel-pager-button-next {
     border-radius: 0 5px 5px 0;
     border: 1px solid #E3E3E3;
+}
+
+@media screen and (max-width: 1230px) {
+    .carousel {
+        display: none;
+    }
 }

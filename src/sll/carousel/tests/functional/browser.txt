@@ -1,11 +1,10 @@
-Log in as the portal owner::
+Log in as Manager::
 
-    >>> from plone.app.testing import TEST_USER_NAME, TEST_USER_PASSWORD
     >>> browser.login(TEST_USER_NAME, TEST_USER_PASSWORD)
 
 Check Carousel link::
 
-    >>> browser.open(portal_url)
+    >>> browser.open('/')
     >>> '@@edit-carousel' in browser.contents
     True
 
@@ -21,7 +20,7 @@ Log in as editor::
 
 Check Carousel link::
 
-    >>> browser.open(portal_url)
+    >>> browser.open('/')
     >>> '@@edit-carousel' in browser.contents
     False
 

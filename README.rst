@@ -7,6 +7,11 @@ sll.carousel customizes Products.Carousel package for SLL Site.
 Change log
 ----------
 
+0.3 (2012-12-07)
+================
+
+- Added testing integration to Travis CI. [taito]
+
 0.2 (2012-11-14)
 ================
 

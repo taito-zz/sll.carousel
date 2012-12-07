@@ -5,6 +5,7 @@
   xmlns="http://namespaces.zope.org/zope">
 
   <include package="Products.Carousel" />
+  <include package=".browser" />
 
   <genericsetup:registerProfile
     description="Installs the sll.carousel package"
@@ -13,7 +14,5 @@
     provides="Products.GenericSetup.interfaces.EXTENSION"
     title="sll.carousel"
     />
-
-  <include package=".browser" />
 
 </configure>

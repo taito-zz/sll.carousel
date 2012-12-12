@@ -7,6 +7,11 @@ sll.carousel customizes Products.Carousel package for SLL Site.
 Change log
 ----------
 
+0.3.1 (2012-12-12)
+==================
+
+- Added margin around carousel text body. [taito]
+
 0.3 (2012-12-07)
 ================
 

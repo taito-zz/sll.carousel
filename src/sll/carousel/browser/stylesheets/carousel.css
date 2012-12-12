@@ -39,7 +39,7 @@
 }
 .carousel-body {
     font-size: 90%;
-    margin-right: 0.1em;
+    margin: 1em 0;
 }
 .carousel-pager-item {
     background-color: transparent;

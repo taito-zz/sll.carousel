@@ -9,13 +9,13 @@
 }
 .carousel {
     background-color: white;
-    margin: auto;
-    width: 80%
+    margin: auto auto 0.7em;
+    width: 80%;
 }
 .carousel-pager {
     position: relative;
     text-align: right;
-    top: -40px;
+    top: -50px;
     width: 960px;
 }
 .carousel-image {

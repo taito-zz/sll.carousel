@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<object>
+  <order manager="plone.abovecontent" skinname="*">
+    <viewlet name="slt.carousel.viewlet" />
+  </order>
+  <hidden manager="plone.abovecontent" skinname="*">
+    <viewlet name="Products.Carousel.viewlet" />
+  </hidden>
+</object>

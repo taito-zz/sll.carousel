@@ -7,6 +7,12 @@ sll.carousel customizes Products.Carousel package for SLL Site.
 Change log
 ----------
 
+0.4 (2012-12-20)
+================
+
+- Added translation. [taito]
+- Removed dependency to sll.templates. [taito]
+
 0.3.1 (2012-12-12)
 ==================
 

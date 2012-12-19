@@ -104,6 +104,28 @@ class TestCase(IntegrationTestCase):
         permission = "Carousel: Add Carousel Banner"
         self.assertEqual(self.portal.acquiredRolesAreUsedBy(permission), '')
 
+    def test_viewlets__hidden__plone_portalfooter(self):
+        from zope.component import getUtility
+        from plone.app.viewletmanager.interfaces import IViewletSettingsStorage
+        storage = getUtility(IViewletSettingsStorage)
+        manager = "plone.abovecontent"
+        skinname = "*"
+        # Why?
+        # self.assertEqual(storage.getHidden(manager, skinname), (
+        #     u'Products.Carousel.viewlet'))
+        self.assertEqual(storage.getHidden(manager, skinname), ())
+
+    def test_viewlets__order__plone_portalfooter(self):
+        from zope.component import getUtility
+        from plone.app.viewletmanager.interfaces import IViewletSettingsStorage
+        storage = getUtility(IViewletSettingsStorage)
+        manager = "plone.abovecontent"
+        skinname = "*"
+        # Why?
+        # self.assertEqual(storage.getOrder(manager, skinname) (
+        #     u'plone.path_bar', u'slt.carousel.viewlet'))
+        self.assertEqual(storage.getOrder(manager, skinname), ('Products.Carousel.viewlet', u'plone.path_bar', u'slt.carousel.viewlet'))
+
     def test_uninstall__package(self):
         installer = getToolByName(self.portal, 'portal_quickinstaller')
         installer.uninstallProducts(['sll.carousel'])

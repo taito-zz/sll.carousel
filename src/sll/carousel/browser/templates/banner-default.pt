@@ -41,7 +41,7 @@
                     tal:attributes="href link_url;"
                     tal:omit-tag="not:has_link_url"
                     class="carousel-link"
-                    i18n:domain="sll.templates"
+                    i18n:domain="sll.carousel"
                     i18n:translate="">
                     Read more
                 </a>

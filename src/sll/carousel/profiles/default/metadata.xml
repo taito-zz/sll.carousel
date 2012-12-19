@@ -3,5 +3,6 @@
   <version>1</version>
   <dependencies>
     <dependency>profile-Products.Carousel:default</dependency>
+    <dependency>profile-sll.basetheme:default</dependency>
   </dependencies>
 </metadata>

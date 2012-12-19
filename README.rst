@@ -7,6 +7,11 @@ sll.carousel customizes Products.Carousel package for SLL Site.
 Change log
 ----------
 
+0.4.1 (2012-12-xx)
+==================
+
+- Added dependency to sll.basetheme. [taito]
+
 0.4 (2012-12-20)
 ================
 

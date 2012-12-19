@@ -11,6 +11,7 @@ Change log
 ==================
 
 - Added dependency to sll.basetheme. [taito]
+- Tested with Products.Carousel-2.2. [taito]
 
 0.4 (2012-12-20)
 ================

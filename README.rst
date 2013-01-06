@@ -7,11 +7,11 @@ sll.carousel customizes Products.Carousel package for SLL Site.
 Change log
 ----------
 
-0.4.1 (2012-12-xx)
+0.4.1 (2013-01-06)
 ==================
 
 - Added dependency to sll.basetheme. [taito]
-- Tested with Products.Carousel-2.2. [taito]
+- Tested with Plone-4.2.3 and Products.Carousel-2.2. [taito]
 
 0.4 (2012-12-20)
 ================

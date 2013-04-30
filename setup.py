@@ -4,18 +4,18 @@ from setuptools import setup
 
 setup(
     name='sll.carousel',
-    version='0.4.1',
+    version='0.5',
     description="Customizes Products.Carousel package for SLL Site.",
     long_description=open("README.rst").read(),
     classifiers=[
         "Framework :: Plone",
-        "Framework :: Plone :: 4.2",
+        "Framework :: Plone :: 4.3",
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.7"],
     keywords='',
     author='Taito Horiuchi',
     author_email='taito.horiuchi@abita.fi',
-    url='http://www.sll.fi/',
+    url='https://github.com/taito/sll.carousel',
     license='Non-free',
     packages=find_packages('src', exclude=['ez_setup']),
     package_dir={'': 'src'},

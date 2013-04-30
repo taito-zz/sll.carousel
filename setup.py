@@ -24,9 +24,9 @@ setup(
     zip_safe=False,
     install_requires=[
         'Products.Carousel',
-        'hexagonit.testing',
         'setuptools',
         'sll.basetheme'],
+    extras_require={'test': ['hexagonit.testing']},
     entry_points="""
     # -*- Entry points: -*-
 

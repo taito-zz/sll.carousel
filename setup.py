@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='sll.carousel',
-    version='0.5',
+    version='0.5.1',
     description="Customizes Products.Carousel package for SLL Site.",
     long_description=open("README.rst").read(),
     classifiers=[

@@ -38,7 +38,7 @@
     manager="sll.basetheme.browser.interfaces.IAboveColumnsViewletManager"
     name="sll.carousel.viewlet"
     permission="zope2.View"
-    view="plone.app.layout.globals.interfaces.IViewView"
+    view="sll.basetheme.browser.interfaces.INavigationRootView"
     />
 
 </configure>

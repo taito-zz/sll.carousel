@@ -11,6 +11,8 @@ Change log
 ==================
 
 - Fixed typo and added upgrade step for it. [taito]
+- Changed view for viewlets: sll.carousel.viewlet from plone.app.layout.globals.interfaces.IViewView
+  to sll.basetheme.browser.interfaces.INavigationRootView. [taito]
 
 0.5 (2013-04-30)
 ================

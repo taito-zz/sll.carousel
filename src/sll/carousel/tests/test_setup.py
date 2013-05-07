@@ -88,7 +88,7 @@ class TestCase(IntegrationTestCase):
     def test_metadata__version(self):
         setup = getToolByName(self.portal, 'portal_setup')
         self.assertEqual(
-            setup.getVersionForProfile('profile-sll.carousel:default'), u'1')
+            setup.getVersionForProfile('profile-sll.carousel:default'), u'2')
 
     def test_propertiestool_navtree_properties__metaTypesNotToList(self):
         properties = getToolByName(self.portal, 'portal_properties')
@@ -123,7 +123,7 @@ class TestCase(IntegrationTestCase):
         manager = "plone.abovecontent"
         skinname = "*"
         self.assertEqual(storage.getOrder(manager, skinname), (
-            'Products.Carousel.viewlet', u'plone.path_bar', u'slt.carousel.viewlet'))
+            'Products.Carousel.viewlet', u'plone.path_bar', u'sll.carousel.viewlet'))
 
     def test_uninstall__package(self):
         installer = getToolByName(self.portal, 'portal_quickinstaller')

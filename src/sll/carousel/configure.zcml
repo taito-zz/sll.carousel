@@ -7,6 +7,7 @@
   <include package="Products.Carousel" />
   <include package="sll.basetheme" />
   <include package=".browser" />
+  <include file="upgrades.zcml"/>
   <i18n:registerTranslations directory="locales" />
 
   <genericsetup:registerProfile

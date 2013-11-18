@@ -10,6 +10,7 @@
 .carousel {
     background-color: white;
     margin: auto auto 0.7em;
+    max-width: 970px;
     width: 80%;
 }
 .carousel-pager {

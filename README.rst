@@ -7,11 +7,16 @@ sll.carousel customizes Products.Carousel package for SLL Site.
 Change log
 ----------
 
+0.5.2 (2013-11-21)
+==================
+
+- Update style for column width: 970px. [taito]
+
 0.5.1 (2013-05-07)
 ==================
 
-- Fixed typo and added upgrade step for it. [taito]
-- Changed view for viewlets: sll.carousel.viewlet from plone.app.layout.globals.interfaces.IViewView
+- Fix typo and added upgrade step for it. [taito]
+- Change view for viewlets: sll.carousel.viewlet from plone.app.layout.globals.interfaces.IViewView
   to sll.basetheme.browser.interfaces.INavigationRootView. [taito]
 
 0.5 (2013-04-30)

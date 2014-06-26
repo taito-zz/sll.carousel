@@ -3,14 +3,4 @@
   xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
   xmlns="http://namespaces.zope.org/zope">
 
-  <genericsetup:upgradeStep
-    description=""
-    destination="2"
-    handler="sll.carousel.upgrades.reimport_viewlets"
-    profile="sll.carousel:default"
-    sortkey="1"
-    source="1"
-    title="Reimport viewlets"
-    />
-
 </configure>

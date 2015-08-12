@@ -26,7 +26,7 @@ setup(
         'Products.Carousel',
         'setuptools',
         'sll.basetheme'],
-    extras_require={'test': ['hexagonit.testing']},
+    extras_require={'test': ['Products.CMFPlacefulWorkflow', 'hexagonit.testing']},
     entry_points="""
     # -*- Entry points: -*-
 

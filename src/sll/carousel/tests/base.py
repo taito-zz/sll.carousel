@@ -13,6 +13,8 @@ class SllCarouselLayer(PloneSandboxLayer):
     def setUpZope(self, app, configurationContext):
         """Set up Zope."""
         # Load ZCML
+        import Products.CMFPlacefulWorkflow
+        self.loadZCML(package=Products.CMFPlacefulWorkflow)
         import sll.carousel
         self.loadZCML(package=sll.carousel)
 

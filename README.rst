@@ -7,6 +7,12 @@ sll.carousel customizes Products.Carousel package for SLL Site.
 Change log
 ----------
 
+
+0.6 (2015-08-12)
+==================
+
+- Add dependency to Products.CMFPlacefulWorkflow for test. [taito]
+
 0.5.3 (2014-06-26)
 ==================
 

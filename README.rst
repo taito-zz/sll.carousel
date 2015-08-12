@@ -4,9 +4,17 @@ sll.carousel
 
 sll.carousel customizes Products.Carousel package for SLL Site.
 
+.. image:: https://secure.travis-ci.org/taito/sll.carousel.png
+    :target: http://travis-ci.org/taito/sll.carousel
+
+Currently tested with
+---------------------
+
+- Plone-4.3.6
+- Python-2.7.10
+
 Change log
 ----------
-
 
 0.6 (2015-08-12)
 ==================

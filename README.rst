@@ -12,6 +12,7 @@ Change log
 ==================
 
 - Add dependency to Products.CMFPlacefulWorkflow for test. [taito]
+- Style carousel to keep it shown till width 970px. [taito]
 
 0.5.3 (2014-06-26)
 ==================

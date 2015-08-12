@@ -11,7 +11,7 @@
     background-color: white;
     margin: auto auto 0.7em;
     max-width: 970px;
-    width: 80%;
+    /*width: 80%;*/
 }
 .carousel-pager {
     position: relative;
@@ -90,7 +90,7 @@
     border: 1px solid #E3E3E3;
 }
 
-@media screen and (max-width: 1230px) {
+@media screen and (max-width: 970px) {
     .carousel {
         display: none;
     }
